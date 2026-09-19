@@ -10,7 +10,7 @@ public class MergeSort {
         if (a == null || a.length <= 1) {
             return;
         }
-        int[] buffer = new int[a.length]; // единственное выделение памяти под буфер
+        int[] buffer = new int[a.length];
         sort(a, buffer, 0, a.length - 1, metrics);
     }
 
