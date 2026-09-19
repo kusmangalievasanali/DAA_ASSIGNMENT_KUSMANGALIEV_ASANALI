@@ -78,7 +78,7 @@ public class QuickSort {
         result[1] = greaterThanPointer + 1;
         return result;
     }
-
+// do change
     private static void swap(int[] array, int indexA, int indexB) {
         int temp = array[indexA];
         array[indexA] = array[indexB];
