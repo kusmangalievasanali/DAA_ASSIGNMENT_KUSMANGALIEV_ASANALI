@@ -9,7 +9,7 @@ public class QuickSelect {
         if (array == null || array.length == 0) {
             throw new IllegalArgumentException("Array is empty");
         }
-
+//check negative nums also
         if (k < 0 || k >= array.length) {
             throw new IllegalArgumentException("k is out of range: " + k);
         }
