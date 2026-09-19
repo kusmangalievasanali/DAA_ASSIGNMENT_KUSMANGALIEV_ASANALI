@@ -1,5 +1,5 @@
 package metrics;
-
+//comparison part
 public class Metrics {
     private long comparisons = 0;
     private int currentDepth = 0;
