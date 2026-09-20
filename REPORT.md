@@ -124,3 +124,26 @@ element than the theory alone would suggest. Finally, the cutoff size (15
 elements) means very small subarrays are sorted with Insertion Sort instead
 of continuing the recursion, which slightly changes the constant factor but
 not the overall growth rate.
+
+## Bonus Task A: Median of Medians
+
+`MedianOfMediansSelect` picks the pivot using median-of-medians instead of
+a random pivot: split into groups of 5, sort each group, take medians,
+recursively find the median of those medians. This guarantees the pivot
+is never too far from the middle, giving O(n) worst-case time (not just
+O(n) on average like regular QuickSelect).
+Median-of-Medians uses about 2.5–3x more comparisons than QuickSelect —
+the cost of guaranteeing a good pivot. Regular QuickSelect is faster in
+practice since a random pivot is almost always good enough, but
+Median-of-Medians is safer when the worst case must be avoided completely.
+
+## Bonus Task B: Closest Pair of Points
+
+`ClosestPair` finds the two closest points out of n points in O(n log n)
+time. It sorts points by x, splits them in half, solves each half on its
+own, then checks a small "strip" of points near the middle — only the
+next 7 points for each one need to be checked.
+We checked it against a slow brute-force method (checking every pair,
+O(n²)) on 50 random tests — the answers always matched.
+Both methods find the same answer, but the fast version uses about 75x
+fewer comparisons than brute-force.
